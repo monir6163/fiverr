@@ -1,6 +1,4 @@
 import { Inter } from "next/font/google";
-import "swiper/css";
-import "swiper/css/navigation";
 
 import { CookiesConsent } from "@/components/cookies-consent";
 import GoogleAnalytics from "@/components/google-analytics";

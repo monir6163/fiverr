@@ -47,7 +47,6 @@ import { Partner } from "@/components/partner";
 import { ShadowBehindHeroDash } from "@/components/shapes";
 import { TweetsEllipses } from "@/components/shapes/tweets-ellipses";
 import { Supporter } from "@/components/supporter";
-import { SwiperBase } from "@/components/swiper-base";
 import { SwiperLg } from "@/components/swiper-lg";
 import { WhaleBannerAnimation } from "@/components/whale-banner-animation";
 import { socialLinks } from "@/lib/constants";
@@ -873,9 +872,9 @@ const Home = () => {
                 <TweetsEllipses className="absolute inset-x-0 mx-auto -mt-32 max-w-[400px] lg:max-w-[528px]" />
               </div>
 
-              <div className="relative mt-[62px]">
+              <div className="relative mt-[62px] px-5">
                 <SwiperLg />
-                <SwiperBase />
+                {/* <SwiperBase /> */}
               </div>
             </section>
 
