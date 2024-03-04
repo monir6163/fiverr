@@ -57,8 +57,12 @@ export const SwiperLg = () => {
         className="mySwiper"
       >
         {tweetIds.map((tweet, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex h-fit max-w-5xl justify-center ">
+          <SwiperSlide
+            key={index}
+            className="max-h-[500px] overflow-y-scroll"
+            id="custom_overflow"
+          >
+            <div className="flex max-w-5xl justify-center">
               <div className="w-full max-w-[550px]">
                 <TweetEmbed options={tweet.options} tweetId={tweet.id} />
               </div>
