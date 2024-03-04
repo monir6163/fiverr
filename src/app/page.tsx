@@ -52,7 +52,8 @@ import { WhaleBannerAnimation } from "@/components/whale-banner-animation";
 import { socialLinks } from "@/lib/constants";
 
 const Home = () => {
-  const targetDate = new Date("2024-04-30T23:59:59");
+  // 5 days from now (in milliseconds)
+  const targetDate = new Date().getTime() + 6 * 24 * 60 * 60 * 1000;
 
   return (
     <>
@@ -165,7 +166,7 @@ const Home = () => {
               </div>
 
               {/* countdown */}
-              <CountDown targetDate={targetDate} />
+              <CountDown targetDate={new Date(targetDate)} />
 
               {/* <Link
                 href="/"
