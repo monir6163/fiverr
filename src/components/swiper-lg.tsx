@@ -11,40 +11,30 @@ import { Navigation } from "swiper/modules";
 
 const tweetIds = [
   {
-    id: "1752390435304087886",
+    id: "1756235842228494765",
     options: { theme: "dark" },
   },
   {
-    id: "1763663651674734849",
+    id: "1760382247641756160",
     options: { theme: "dark" },
   },
   {
-    id: "1763663901466501371",
+    id: "1761398671076217330",
     options: { theme: "dark" },
   },
   {
-    id: "1763319115442159634",
-    options: { theme: "dark" },
-  },
-  {
-    id: "1681843994186387457",
-    options: { theme: "dark" },
-  },
-  {
-    id: "1677828720290086913",
+    id: "1762170264475914480",
     options: { theme: "dark" },
   },
 ];
 
 export const SwiperLg = () => {
-  const tweetEmbedOptions = { theme: "dark" };
   return (
     <>
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
         navigation={true}
-        loop={true}
         breakpoints={{
           1024: {
             slidesPerView: 3,
@@ -68,7 +58,7 @@ export const SwiperLg = () => {
       >
         {tweetIds.map((tweet, index) => (
           <SwiperSlide key={index}>
-            <div className="flex max-w-5xl justify-center ">
+            <div className="flex h-fit max-w-5xl justify-center ">
               <div className="w-full max-w-[550px]">
                 <TweetEmbed options={tweet.options} tweetId={tweet.id} />
               </div>
