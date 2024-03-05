@@ -15,46 +15,46 @@ export const SwiperBase = () => {
       className="lg:!hidden"
     >
       <SwiperSlide>
-        <div className="flex justify-center px-[60px]">
+        <div className="flex justify-center">
           <div className="w-full max-w-[550px]">
             <TweetEmbed
               options={tweetEmbedOptions}
-              tweetId="1681922904458674177"
+              tweetId="1756235842228494765"
             />
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex justify-center px-[60px]">
+        <div className="flex justify-center">
           <div className="w-full max-w-[550px]">
             <TweetEmbed
               options={tweetEmbedOptions}
-              tweetId="1679312411344633856"
+              tweetId="1760382247641756160"
             />
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex justify-center px-[60px]">
+        <div className="flex justify-center">
           <div className="w-full max-w-[550px]">
             <TweetEmbed
               options={tweetEmbedOptions}
-              tweetId="1680636103999496194"
+              tweetId="1761398671076217330"
             />
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex justify-center px-[60px]">
+        <div className="flex justify-center">
           <div className="w-full max-w-[550px]">
             <TweetEmbed
               options={tweetEmbedOptions}
-              tweetId="1681843994186387457"
+              tweetId="1762170264475914480"
             />
           </div>
         </div>
       </SwiperSlide>
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <div className="flex justify-center px-[60px]">
           <div className="w-full max-w-[550px]">
             <TweetEmbed
@@ -73,7 +73,7 @@ export const SwiperBase = () => {
             />
           </div>
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 };

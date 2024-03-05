@@ -1,75 +1,61 @@
 "use client";
 
+import TweetEmbed from "react-tweet-embed";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import TweetEmbed from "react-tweet-embed";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
-
-const tweetIds = [
-  {
-    id: "1756235842228494765",
-    options: { theme: "dark" },
-  },
-  {
-    id: "1760382247641756160",
-    options: { theme: "dark" },
-  },
-  {
-    id: "1761398671076217330",
-    options: { theme: "dark" },
-  },
-  {
-    id: "1762170264475914480",
-    options: { theme: "dark" },
-  },
-];
-
 export const SwiperLg = () => {
+  const tweetEmbedOptions = { theme: "dark" };
   return (
-    <>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={10}
-        navigation={true}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-        }}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
-        {tweetIds.map((tweet, index) => (
-          <SwiperSlide
-            key={index}
-            className="max-h-[500px] overflow-y-scroll"
-            id="custom_overflow"
-          >
-            <div className="flex max-w-5xl justify-center">
-              <div className="w-full max-w-[550px]">
-                <TweetEmbed options={tweet.options} tweetId={tweet.id} />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+    <Swiper
+      navigation={true}
+      modules={[Navigation]}
+      className="!hidden lg:!block"
+    >
+      <SwiperSlide>
+        <div className="grid grid-cols-3 gap-[30px] px-[60px]">
+          <div>
+            <TweetEmbed
+              tweetId="1756235842228494765"
+              options={tweetEmbedOptions}
+            />
+          </div>
+          <div className="gap-[30px] pt-[68px]">
+            <TweetEmbed
+              tweetId="1760382247641756160"
+              options={tweetEmbedOptions}
+            />
+          </div>
+          <div>
+            <TweetEmbed
+              tweetId="1761398671076217330"
+              options={tweetEmbedOptions}
+            />
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="grid grid-cols-3 gap-[30px] px-[60px]">
+          <div>
+            <TweetEmbed
+              tweetId="1762170264475914480"
+              options={{ ...tweetEmbedOptions, cards: "hidden" }}
+            />
+          </div>
+          {/* <div className="gap-[30px] pt-[68px]">
+            <TweetEmbed
+              tweetId="1681843994186387457"
+              options={tweetEmbedOptions}
+            />
+          </div>
+          <div>
+            <TweetEmbed
+              tweetId="1677828720290086913"
+              options={tweetEmbedOptions}
+            />
+          </div> */}
+        </div>
+      </SwiperSlide>
+    </Swiper>
   );
 };
