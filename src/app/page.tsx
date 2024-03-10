@@ -53,7 +53,7 @@ import { WhaleBannerAnimation } from "@/components/whale-banner-animation";
 import { socialLinks } from "@/lib/constants";
 
 const Home = () => {
-  const targetDate = new Date("2024-03-09T23:59:59"); // Get the current date and time
+  const targetDate = new Date("2024-03-16T23:59:59"); // Get the current date and time
 
   return (
     <>
